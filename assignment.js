@@ -15,20 +15,30 @@ var budget = budgetCalculator(2, 3, 2);
 console.log(budget);
 
 // // 3.hotelCost
-function hotelCost(n){
-    if(n <= 10){
-        totalCost = (n * 100);// cost = 100 for 1st 1o day's
-        return totalCost;
+function hotelCost(totalDay){
+    var totalCost = 0;
+    if(totalDay <= 10){  
+        totalCost = totalDay*100; 
+    }
+    else if(totalDay<=20){  
+       var firstTenDays =10*100;
+       var remainingDay = totalDay-10;   
+       var secondTenDays=remainingDay*80;  
+       totalCost=firstTenDays + secondTenDays; 
+
     }
     else{
-        var FirstTenDays=10;
-        extraday=n-10;// extraday =  The days after 10 days
-        totalCost=(FirstTenDays * 100) + (extraday * 80);//Add the price first ten days and the days after 10 days
-        return totalCost;
-    }
+        var firstTenDays = 10*100;  
+        var secondTenDays = 10*80;  
+        var remainingDay = totalDay-20; 
+        var extraDays = remainingDay*50; 
+        totalCost = firstTenDays + secondTenDays + extraDays; 
+ 
+     }
+    return totalCost;
 }
-var result = hotelCost(21);
-console.log(result);
+var result=hotelCost(21);
+console.log(result)
  
 // 4. megaFriend
 function megaFriend(arr){
