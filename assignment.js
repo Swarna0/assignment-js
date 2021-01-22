@@ -1,3 +1,4 @@
+// https://github.com/Swarna0/assignment-js
 // 1. kilometerToMeter
 function kilometerToMeter(n){
     var meter = n*1000;
@@ -14,7 +15,7 @@ function budgetCalculator(watch, mobile, laptop){
 var budget = budgetCalculator(2, 3, 2);
 console.log(budget);
 
-// // 3.hotelCost
+// 3.hotelCost
 function hotelCost(totalDay){
     var totalCost = 0;
     if(totalDay <= 10){  
